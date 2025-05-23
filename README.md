@@ -6,13 +6,6 @@
 
 It is made with a grid layout that adapts to various screen sizes. Along with grid layout, it uses media queries to change the layout and sizes of text and images for use with smaller screens.
 
-- Figma
-- Images
-
-**Intro**
-
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
-
 **Figma**
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
@@ -26,6 +19,9 @@ This project is made so all the elements are displayed correctly on popular scre
 ![alt text](../../Downloads/tinified/5-photo-by-van-anh-nguyen-from-pexels.jpg)
 ![alt text](../../Downloads/tinified/6-photo-by-moritz-feldmann-from-pexels.jpg)
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
+Plans for Improvement:
+The obvious plan is to make the site usable for the user. As the buttons for editing and adding photos are non-funtioning at this stage.
 
-Good luck and have fun!
+https://plinko21.github.io/spots_project/
+
+https://www.loom.com/share/b82912eeb7504203abe2c829da4da954?sid=580e5b2b-a1a0-490b-b7c8-e7390078aeb5
