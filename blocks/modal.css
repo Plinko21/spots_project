@@ -17,7 +17,7 @@
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.5s linear 0.5s, opacity 0.5s linear;
+  transition: visibility 0.5s linear 0s, opacity 0.5s linear;
 }
 
 .modal__container {
@@ -27,6 +27,7 @@
   background-color: #fff;
   position: relative;
   padding: 32px 50px;
+  box-sizing: border-box;
 }
 
 .modal__close-button {
@@ -41,6 +42,7 @@
   justify-content: center;
   align-items: center;
   border: none;
+  background-color: transparent;
 }
 
 .modal__close-button:hover {
@@ -70,6 +72,10 @@
   padding: 16px 12px;
   font-weight: 500;
   font-size: 20px;
+  box-sizing: border-box;
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .modal__input:hover {
@@ -102,11 +108,30 @@
   width: 100%;
   font-weight: 500;
   font-size: 16px;
+  border: none;
+}
+
+.modal__save-button:hover {
+  cursor: pointer;
+  background-color: #21212180;
 }
 
 @media screen and (max-width: 320px) {
+  .modal__container {
+    padding: 12px;
+  }
+
+  .modal__close-button {
+    top: 12px;
+    right: 12px;
+  }
+
   .modal__title {
     font-size: 20px;
+  }
+
+  .modal__form {
+    max-width: 276px;
   }
 
   .modal__input {
