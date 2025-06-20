@@ -1,9 +1,41 @@
+.card {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .card__image {
   height: 413px;
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
   display: block;
+}
+
+.card__delete-button {
+  background-image: url(../images/delete-icon.svg);
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* I couldn't figure out how to fade the grey overlay of the icon and keep the white trash can background to pop through,
+I tried background: transparent, opacity, filter and change brightness and contrast this made it all gray. I asked dot
+ and still couldnt figure it out.so I grabbed just the trash can icon from the fignma that was actually on the image and
+  used that. seems to be working. styling just the trash can and then switching back to the original image i couldn't style,
+ now has it styled correctly.  */
+
+.card__delete-button:hover {
+  background-image: url(../images/delete-icon-hover.svg);
+  cursor: pointer;
 }
 
 .card__content {
@@ -39,6 +71,15 @@
 
 .card__like-button:hover {
   opacity: 1;
+}
+
+.card__like-button_active {
+  background-image: url(../images/like-clicked.svg);
+  opacity: 1;
+}
+
+.card__like-button_active:hover {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 630px) {
