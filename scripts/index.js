@@ -85,7 +85,7 @@ function getCardElement(data) {
   });
 
   deleteButton.addEventListener("click", () => {
-    deleteButton.classList.toggle("card__delete-button_active");
+    deleteButton.classList.remove("card__delete-button_active");
   });
 
   cardImage.addEventListener("click", () => {
@@ -146,13 +146,11 @@ function handleNewPostSubmit(evt) {
   const newCardElement = getCardElement(newCardData);
   cardsList.prepend(newCardElement); // Add to top
 
-  newPostForm.reset(); //  clear the form fields
   closeModal(newPostModal);
+  newPostForm.reset(); //  clear the form fields
 
   console.log(newPostImageInput.value);
   console.log(newPostCaptionInput.value);
-
-  closeModal(newPostModal);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
@@ -164,4 +162,5 @@ initialCards
   .forEach((card) => {
     const cardElement = getCardElement(card);
     cardsList.prepend(cardElement);
-  });
+  }); // The brief stated to use prepend and this was the way I found to make it happen,
+// please let me know if it's still better to change it and I will

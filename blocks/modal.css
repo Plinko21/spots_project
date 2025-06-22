@@ -150,11 +150,11 @@
   border-radius: 8px;
   padding: 4px 8px;
   margin: 8px 0 0 0;
-  width: 214px;
+  width: fit-content;
   line-height: 120%;
   font-weight: 500;
   font-size: 20px;
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 320px) {
@@ -192,7 +192,6 @@
   }
 
   .modal__caption {
-    width: 175px;
     font-size: 16px;
   }
 
