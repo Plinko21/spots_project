@@ -85,7 +85,7 @@ function getCardElement(data) {
   });
 
   deleteButton.addEventListener("click", () => {
-    deleteButton.classList.remove("card__delete-button_active");
+    cardElement.remove();
   });
 
   cardImage.addEventListener("click", () => {
