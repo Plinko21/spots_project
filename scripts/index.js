@@ -1,7 +1,7 @@
 const initialCards = [
   {
     name: "Golden Gate Bridge",
-    link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
 
   {
@@ -101,15 +101,21 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscClose);
+  modal.addEventListener("mousedown", handleOverlayClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
+  modal.removeEventListener("mousedown", handleOverlayClick);
 }
 
 editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  const form = editProfileModal.querySelector(".modal__form");
+  resetValidation(form, config);
   openModal(editProfileModal);
 });
 
@@ -122,6 +128,8 @@ previewCloseButton.addEventListener("click", () => {
 });
 
 newPostButton.addEventListener("click", function () {
+  form.reset();
+  resetValidation(form, settings);
   openModal(newPostModal);
 });
 
@@ -150,9 +158,6 @@ function handleNewPostSubmit(evt) {
 
   closeModal(newPostModal);
   newPostForm.reset(); //  clear the form fields
-
-  console.log(newPostImageInput.value);
-  console.log(newPostCaptionInput.value);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);

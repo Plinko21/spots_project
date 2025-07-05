@@ -104,7 +104,7 @@
   border-color: #21212140;
 }
 
-.modal__input::placeholder {
+.modal__input:placeholder {
   color: #21212130;
 }
 
