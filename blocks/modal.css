@@ -81,6 +81,7 @@
 .modal__input {
   display: block;
   margin-top: 8px;
+  margin-bottom: 8px;
   width: 100%;
   border-radius: 8px;
   border-color: #21212140;
@@ -107,6 +108,23 @@
   color: #21212130;
 }
 
+.modal__input_type_error {
+  border: 1px solid #ff000060;
+}
+
+.modal__error {
+  color: #ff0000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  display: none;
+}
+
+.modal__error--visible {
+  display: block;
+}
+
 .modal__label {
   font-weight: 500;
   font-size: 16px;
@@ -129,6 +147,10 @@
 .modal__save-button:hover {
   cursor: pointer;
   background-color: #21212180;
+}
+
+.modal__save-button-inactive {
+  background-color: #21212150;
 }
 
 .modal__image-container {

@@ -50,6 +50,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 const newPostButton = document.querySelector(".profile__new-post");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostSubmitButton = newPostModal.querySelector(".modal__save-button");
 const newPostCloseButton = newPostModal.querySelector(".modal__close-button");
 const newPostImageInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
@@ -137,6 +138,7 @@ function handleEditProfileSubmit(evt) {
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
+  disableButton(newPostSubmitButton, config);
 
   const newCardData = {
     name: newPostCaptionInput.value,
