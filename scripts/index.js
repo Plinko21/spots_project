@@ -105,6 +105,21 @@ function openModal(modal) {
   modal.addEventListener("mousedown", handleOverlayClick);
 }
 
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_is-opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
+function handleOverlayClick(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
+  }
+}
+
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
   document.removeEventListener("keydown", handleEscClose);
@@ -128,8 +143,8 @@ previewCloseButton.addEventListener("click", () => {
 });
 
 newPostButton.addEventListener("click", function () {
-  form.reset();
-  resetValidation(form, settings);
+  newPostForm.reset();
+  resetValidation(newPostForm, config);
   openModal(newPostModal);
 });
 
