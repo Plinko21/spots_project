@@ -1,4 +1,5 @@
 .modal {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;

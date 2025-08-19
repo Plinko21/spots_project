@@ -132,6 +132,10 @@
   }
 
   .profile__avatar-btn {
+    visibility: hidden;
+  }
+
+  .profile__avatar-container:hover .profile__avatar-btn {
     visibility: visible;
   }
 
@@ -139,6 +143,9 @@
     height: 80px;
     width: 80px;
     margin: 0 0 12px;
+    display: block !important; /* Force visibility */
+    opacity: 1 !important; /* Ensure it's not transparent */
+    visibility: visible !important; /* Ensure it's not hidden */
   }
 
   .profile__avatar-btn::after {
@@ -167,5 +174,24 @@
   .profile__new-post {
     margin: 0;
     width: 100%;
+  }
+}
+
+/* Your existing CSS stays the same, just add this additional media query */
+
+@media screen and (max-width: 320px) {
+  .profile {
+    max-width: 100%; /* Remove the fixed max-width */
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .profile__avatar {
+    height: 60px; /* Make avatar smaller on very small screens */
+    width: 60px;
+  }
+
+  .profile__avatar-container {
+    margin-right: 0; /* Remove right margin in mobile */
   }
 }
